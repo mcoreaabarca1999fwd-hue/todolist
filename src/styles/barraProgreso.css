@@ -4,8 +4,8 @@
   border-radius: 10px;
   overflow: hidden;
   appearance: none; 
-  margin-bottom: 20%;
-  margin-left: 50%;
+  margin-bottom: 5%;
+  margin-left: 100%;
 }
 
 .barraP::-webkit-progress-bar {

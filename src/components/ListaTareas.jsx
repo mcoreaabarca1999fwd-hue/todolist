@@ -3,18 +3,31 @@ import { deleteData, patchData } from '../services/fetch.js';
 import Tarea from './tarea'
 
 const ListaTareas = ({tareitas}) => {
-    if (!tareitas || tareitas.lenght === 0 ) {
+    if (!tareitas || tareitas.length === 0 ) {
         return <h1>No hay tareas</h1>
     }
     const [mostrarEdicion,setMostrarEdicion] = useState(false)
-    const [textoEditar,setTextoEditar] = useState(false)
+    const [textoEditar,setTextoEditar] = useState('')
+    const [fechaEditar, setFechaEditar] = useState('');
+    const [idEditar, setIdEditar] = useState(null);
   async function eliminarTarea(id) {
       const peticion = await deleteData('tareas', id)
       console.log(peticion);
 } 
  async function actualizarTarea(id,titulo,fecha) {
+if (titulo.trim() === '') {
+    return;
+  }
+
+  if (fecha.trim() === '') {
+    return;
+  }
+
     await patchData("tareas",{nombreTarea:titulo,fechaVencimiento:fecha},id)
     setMostrarEdicion(false)
+    setTextoEditar('');
+    setFechaEditar('');
+    setIdEditar(null);
  }
 
  async function cambiarEstado(id,estado) {
@@ -33,8 +46,11 @@ const ListaTareas = ({tareitas}) => {
                     completarTarea={()=>cambiarEstado(tarea.id,tarea.estado)}
                     eliminar={()=>{eliminarTarea(tarea.id)}}
                     editar={()=>{
-                        setMostrarEdicion(!mostrarEdicion)
-                        localStorage.setItem('idTarea',tarea.id)
+                        setMostrarEdicion(true);
+                    setIdEditar(tarea.id);
+                    setTextoEditar(tarea.nombreTarea);
+                    setFechaEditar(tarea.fechaVencimiento);
+
 
                     }}
                 />
@@ -42,10 +58,10 @@ const ListaTareas = ({tareitas}) => {
         })}
         {mostrarEdicion && (
         <>
-            <input type="text" className='inputEditar' placeholder='Edicion titulo' onChange={(e)=>setTextoEditar(e.target.value)}/>
-            <input type= "date" className='inputEditar' onChange={(e)=>setTextoEditar(e.target.value)}/>
+            <input type="text" className='inputEditar' placeholder='Edicion tarea' value={textoEditar} onChange={(e)=>setTextoEditar(e.target.value)}/>
+            <input type= "date" className='inputEditar' value={fechaEditar} onChange={(e)=>setFechaEditar(e.target.value)}/>
             <button className='confirm'
-                onClick={()=>actualizarTarea(localStorage.getItem('idTarea'),textoEditar,'')}
+                onClick={()=>actualizarTarea(idEditar, textoEditar, fechaEditar)}
             ><img src="../src/img/confirmarMorado.png" alt="" /></button>
         </>
         )}

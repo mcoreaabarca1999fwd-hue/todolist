@@ -16,20 +16,19 @@ const BarraProgreso = () => {
             setCompletadas(filtroCompletas)
             setPendientes(filtroPendientes)
 
-            console.log(filtroCompletas);
-            console.log(filtroPendientes);
         }
         traerTareas()
     }, []);
 
-    
+    const total = pendientes + completadas;
+  const porcentaje = total > 0 ? (completadas / total) * 100 : 0;
 
 
     
 
     return (
     <div className='contenedorBarraP'>
-         <progress className='barraP' id="file" value="35" max="100"> 35 </progress>
+         <progress className='barraP' id="file" value={porcentaje} max="100"> {porcentaje} </progress>
     </div>
   )
 }

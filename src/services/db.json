@@ -1,3 +1,16 @@
 {
-  "tareas": []
+  "tareas": [
+    {
+      "id": "4324",
+      "nombreTarea": "dormir",
+      "fechaVencimiento": "2025-09-17",
+      "estado": "pendiente"
+    },
+    {
+      "id": "5fb9",
+      "nombreTarea": "comer",
+      "fechaVencimiento": "2025-09-16",
+      "estado": "pendiente"
+    }
+  ]
 }

@@ -12,7 +12,7 @@
     align-items: center;
     margin: 10px;
     text-align: justify;
-    
+    box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.1);
     
 }
 
@@ -21,7 +21,6 @@
     backdrop-filter: blur(7px);
     height: 125px;
     width: 500px;
-    overflow: auto;
     text-align: center;
     align-content: center;
     font-family: sans-serif;
