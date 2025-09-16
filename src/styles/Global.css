@@ -1,0 +1,46 @@
+body{
+    background-image: url(../img/lineasmoradas.jpg);
+}
+
+.inputEditar{
+    background-color: #faf2e1;
+    border-radius: 3px;
+    height: 40px;
+    border-style: none;
+    text-align: center
+}
+
+.contenedorLista{
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    margin: 10px;
+    
+    min-height: 680px;
+}
+
+.confirm{
+    background: none;
+    border: none;
+}
+
+.confirm :hover{
+    width: 27px;
+    cursor: pointer;
+
+ }
+
+ .contenedorGeneral{
+    background-color: rgba(213, 235, 255, 0.59);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    border-radius: 5%;
+ }
+
+ .contenedorBarraP {
+  width: 100%;
+  max-width: 400px;
+  
+}

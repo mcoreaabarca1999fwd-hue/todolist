@@ -1,0 +1,59 @@
+.inputTarea{
+    width: 500px;
+    
+}
+
+.inputTarea :hover{
+    background-color: #df52db;
+}
+
+.inputsTareas{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    column-gap: 20px;
+    padding: 20px;
+    
+}
+
+.fecha{
+    background-color: #faf2e1;
+    border-radius: 3px;
+    height: 42px;
+    width: 200px;
+    border-style: none;
+    text-align: center;
+}
+
+.inputTarea{
+    background-color: #faf2e1;
+    border-radius: 3px;
+    height: 40px;
+    border-style: none;
+    text-align: center
+}
+
+.botonAg{
+    height: 40px;
+    width: 75px ;
+    background-color: #795690;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    color: #dbbcf6;
+    border: none;
+    border-radius: 3px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.botonAg :hover{
+    
+    width: 90px;
+}
+
+.mensaje{
+    text-align: center;
+    color: #a30e2b;
+    font-size: large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}

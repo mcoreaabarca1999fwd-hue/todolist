@@ -1,0 +1,64 @@
+.contenedor-tarea{
+    color: #222222;
+    width: 100%;
+    height: 130px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(245, 226, 231);
+    backdrop-filter: blur(7px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    text-align: justify;
+    
+    
+}
+
+.textoTarea{
+    background-color: rgb(245, 226, 231);
+    backdrop-filter: blur(7px);
+    height: 125px;
+    width: 500px;
+    overflow: auto;
+    text-align: center;
+    align-content: center;
+    font-family: sans-serif;
+    color: #391b49;
+    
+}
+
+.fechaMostrada{
+    background-color: rgb(245, 226, 231);
+    backdrop-filter: blur(7px);
+    color: #9570c6;
+    width: 100px;
+}
+
+.taskbutton{
+    background: none;
+    border: none;
+}
+
+.taskbutton :hover{
+    width: 25px;
+    cursor: pointer;
+}
+
+.btnEstado{
+    height: 40px;
+    width: 90px ;
+    background-color: #795690;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    color: #dbbcf6;
+    border: none;
+    border-radius: 3px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btnEstado :hover{
+    background-attachment: #999ecf;
+   
+}

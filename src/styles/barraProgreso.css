@@ -1,0 +1,20 @@
+.barraP {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  appearance: none; 
+  margin-bottom: 20%;
+  margin-left: 50%;
+}
+
+.barraP::-webkit-progress-bar {
+  background-color: #e5e7eb; 
+  border-radius: 10px;
+}
+
+.barraP::-webkit-progress-value {
+  background-color: #391b49; 
+  border-radius: 10px;
+  transition: width 0.5s ease; 
+}
